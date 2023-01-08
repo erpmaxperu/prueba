@@ -8,9 +8,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Nuestra Boda | Max & Adriana</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+	<meta name="description" content="Nuestra Boda Max & Adriana" />
+	<meta name="keywords" content="Nuestra Boda Max & Adriana" />
+	<meta name="author" content="" />
 
   <!-- 
 	//////////////////////////////////////////////////////
@@ -40,6 +40,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 	
+	<link rel="icon" type="image/ico" href="assets/images/favicon.ico">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -317,11 +318,10 @@
 		</div>
 	</div>
 
-	
 	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(assets/images/banners/banner-cusco.jpeg);">
 		<div class="overlay"></div>
 		<div class="container">
-			<div class="row animate-box">
+			<div class="row animate-box" id="pag-confirma">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<br>
 					<br>
@@ -340,30 +340,34 @@
 					<form class="form-inline">
 						<div class="col-md-6 col-sm-4">
 							<div class="form-group">
-								<label for="name" class="sr-only">Name</label>
-								<input type="name" class="form-control" id="name" placeholder="Nombres Completos">
+								
+								<input type="name" class="form-control" id="txtnombre" placeholder="Nombres Completos">
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-4">
 							<div class="form-group">
-								<label for="number" class="sr-only">Email</label>
-								<input type="number" class="form-control" id="email" placeholder="Pases">
+								
+								<input type="number" class="form-control" id="txtpase" max="5" placeholder="Pases" >
 							</div>
 						</div>
 
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
-								<label for="number" class="sr-only"></label>
-								<select name="" id="" class="form-control">
-									<option>Seleccionar</option>
-									<option>Si podre ir.</option>
-									<option>No podre ir.</option>
+								
+								<select id="txtpodre" class="form-control">
+									<option value="0">Seleccionar</option>
+									<option value="Si podre ir.">Si podre ir.</option>
+									<option value="No podre ir.">No podre ir.</option>
 								</select>
 							</div>
 						</div>
+
+
+						<div class="col-md-12 col-sm-4">
+							<p style="color: #c18f59;" id="txtvalidar"></p>
+						</div>
 						
 						<div class="col-md-12 col-sm-4">
-							<br>
 							<button type="button" onclick="enviarConfirmacion()" class="btn btn-default btn-block">CONFIRMA TU ASISTENCIA</button>
 						</div>
 						
@@ -416,6 +420,63 @@
 	<!-- Main -->
 	<script src="assets/js/main.js"></script>
 
+	<script>
+
+		function enviarConfirmacion()
+		{
+			var nombres = $('#txtnombre').val();
+			var pase = $('#txtpase').val();
+			var podre =  $('#txtpodre').val();
+	
+			if(nombres=="")
+			{
+				$('#txtvalidar').html("<b>Ingresa tus nombres completos!</b>");
+				return false;
+			}
+			else
+			{
+				$('#txtvalidar').html("");
+			}
+	
+			if(pase=="")
+			{
+				$('#txtvalidar').html("<b>Ingresa tus n° de pases!</b>");
+				return false;
+			}
+			else
+			{
+				$('#txtvalidar').html("");
+			}
+	
+			if(podre=="0")
+			{
+				$('#txtvalidar').html("<b>Selecciona tu disponibilidad!</b>");
+				return false;
+			}
+			else
+			{
+				$('#txtvalidar').html("");
+			}
+	
+	
+			var message = '';
+	
+			message += `*CONFIRMACIÓN DE ASISTENCIA*%0A`;
+			message += `*15 de enero del 2023*%0A`;
+			message += `*---------*%0A`;
+			message += `*Persona:*%0A`;
+			message += nombres+`%0A`;
+			message += `*Pases:*%0A`;
+			message += pase+`%0A`;
+			message += `*Disponibilidad:*%0A`;
+			message += podre+`%0A%0A`;
+			message += "Gracias por tu confirmación 🤵🏻👰🏻";
+			
+			window.open(`https://api.whatsapp.com/send/?phone=51925464465&text=${message}&app_absent=0`, "_blank");
+			//"https://chat.whatsapp.com/ED5uuc8PYpILK4v9HsONTL"
+		}
+			
+	</script>
 
 	</body>
 </html>

@@ -8,9 +8,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Nuestra Boda | Max & Adriana</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+	<meta name="description" content="Nuestra Boda Max & Adriana" />
+	<meta name="keywords" content="Nuestra Boda Max & Adriana" />
+	<meta name="author" content="" />
 
   <!-- 
 	//////////////////////////////////////////////////////
@@ -40,6 +40,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 	
+	<link rel="icon" type="image/ico" href="assets/images/favicon.ico">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -90,7 +91,7 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(assets/images/banner.jpeg); background-repeat: round !important;" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(assets/images/banners/banner.jpeg); background-repeat: round !important;" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -125,7 +126,7 @@
 					</div>
 					<div class="desc-groom">
 						<h3><b>Max Sanchez</b></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+						<p>Un peldaño más en la vida gracias al apoyo de mi familia, agradezco a Dios por todas la bendición. Es grato contar con su asistencia y puedan ser partícipe de esta ceremonia tan especial.</p>
 					</div>
 				</div>
 				<p class="heart text-center"><i class="icon-heart2"></i></p>
@@ -135,7 +136,7 @@
 					</div>
 					<div class="desc-bride">
 						<h3><b>Adriana Castillo</b></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+						<p>Hoy quiero compartir con cada uno de ustedes esta emoción grande, es muy grato de mi parte poder contar con su asistencia en este día tal especial.</p>
 					</div>
 				</div>
 			</div>
@@ -244,7 +245,6 @@
 		</div>
 	</div>
 
-
 	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(assets/images/banners/banner-cusco.jpeg);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -352,7 +352,8 @@
 
 	<script>
 
-	$('#arreglo_invitado').html(ctes.GLOBAL_PERSONA+"<br>&<br> Familia");
+	//$('#arreglo_invitado').html(ctes.GLOBAL_PERSONA+"<br>&<br> Familia");
+	$('#arreglo_invitado').html(ctes.GLOBAL_PERSONA);
 	$('#arreglo_mesa').html(ctes.GLOBAL_MESA);
 	$('#arreglo_pase').html(ctes.GLOBAL_PASES);
 	
@@ -408,6 +409,7 @@
 		message += "Gracias por tu confirmación 🤵🏻👰🏻";
 		
 		window.open(`https://api.whatsapp.com/send/?phone=51925464465&text=${message}&app_absent=0`, "_blank");
+		//"https://chat.whatsapp.com/ED5uuc8PYpILK4v9HsONTL"
 
 	}
 		

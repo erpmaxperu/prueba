@@ -104,7 +104,7 @@
 							}
 
 							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
+						},  k * 50, 'easeInOutExpo' );//200
 					});
 					
 				}, 100);
@@ -222,8 +222,10 @@
 	});
 }());
 
+//Persona <br>&<br> Familia
+//Persona
 var ctes = { 
-	GLOBAL_PERSONA:"Johan Espichan Huapaya",
+	GLOBAL_PERSONA:"Mayra Zafra Blas <br>&</br> Familia",
 	GLOBAL_MESA:"02",
 	GLOBAL_PASES:"06",
 };
