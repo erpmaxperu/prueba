@@ -225,7 +225,7 @@
 //Persona <br>&<br> Familia
 //Persona
 var ctes = { 
-	GLOBAL_PERSONA:"Mayra Zafra Blas <br>&</br> Familia",
+	GLOBAL_PERSONA:"Nombre Persona <br>&</br> Familia",
 	GLOBAL_MESA:"02",
 	GLOBAL_PASES:"06",
 };
